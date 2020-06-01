@@ -1,5 +1,5 @@
 
-[![](https://jitpack.io/v/zxyUncle/zxyMultilingual.svg)](https://jitpack.io/#zxyUncle/zxyMultilingual)
+[![](https://jitpack.io/v/zxyUncle/Toolbar.svg)](https://jitpack.io/#zxyUncle/Toolbar)
 
 
 Gradle
@@ -12,7 +12,10 @@ Step 1
 			...    
 			maven { url 'https://jitpack.io' }     
 		}    
-	}      
+	} 
+	dependencies {
+	        implementation 'com.github.zxyUncle:Toolbar:1.0.0'
+	}
 	
 
 使用
