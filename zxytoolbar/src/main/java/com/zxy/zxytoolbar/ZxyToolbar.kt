@@ -86,17 +86,11 @@ class ZxyToolbar : LinearLayout {
         if (rightImg1 != null) {
             Glide.with(mContext!!).load(rightImg1).into(titleView.ivTitleRightIv1)
             titleView.llTitleRightIv1.visibility = View.VISIBLE
-            titleView.llTitleRightIv1.setOnClickListener {
-                Toast.makeText(mContext, "分享1", Toast.LENGTH_SHORT).show()
-            }
         }
         //右边第二个图片
         if (rightImg2 != null) {
             Glide.with(mContext!!).load(rightImg2).into(titleView.ivTitleRightIv2)
             titleView.llTitleRightIv2.visibility = View.VISIBLE
-            titleView.llTitleRightIv2.setOnClickListener {
-                Toast.makeText(mContext, "分享2", Toast.LENGTH_SHORT).show()
-            }
         }
         //保存
         if (rightText != null) {
@@ -104,9 +98,6 @@ class ZxyToolbar : LinearLayout {
             titleView.tvTitleRight.text = rightText
             if (rightTextColor != null) {//颜色
                 titleView.tvTitleRight.setTextColor(rightTextColor!!)
-            }
-            titleView.llTitleRightTv.setOnClickListener {
-                Toast.makeText(mContext, "分享2", Toast.LENGTH_SHORT).show()
             }
         }
         if(titleText!=null){
@@ -118,9 +109,6 @@ class ZxyToolbar : LinearLayout {
         }
 
         titleView.tvTitle.isSelected = tvTitle.text.length > 9  //开启关闭走马灯
-        titleView.llTitleLeft.setOnClickListener {
-            Toast.makeText(mContext, "返回", Toast.LENGTH_SHORT).show()
-        }
     }
 
     override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
