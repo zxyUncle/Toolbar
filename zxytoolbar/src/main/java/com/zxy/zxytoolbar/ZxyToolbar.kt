@@ -26,6 +26,7 @@ class ZxyToolbar : LinearLayout {
     var rightImg1: Drawable? = null
     var rightImg2: Drawable? = null
     var rightText: String? = null
+    var titleText: String? = null
     var titleSize: Int? = null
 
     @SuppressLint("ResourceType")
@@ -47,6 +48,8 @@ class ZxyToolbar : LinearLayout {
                     titleTextColor = array.getColor(R.styleable.ZXY_titleTextColor, Color.BLACK)
                 R.styleable.ZXY_rightText ->
                     rightText = array.getString(R.styleable.ZXY_rightText)
+                R.styleable.ZXY_titleText ->
+                    titleText = array.getString(R.styleable.ZXY_titleText)
                 R.styleable.ZXY_rightImg1 ->
                     rightImg1 = array.getDrawable(R.styleable.ZXY_rightImg1)
                 R.styleable.ZXY_rightImg2 ->
@@ -56,6 +59,21 @@ class ZxyToolbar : LinearLayout {
 
         array.recycle()//回收
         init()
+    }
+
+    fun addToolbarOnClickListener(callback:(LinearLayout)->Unit){
+        llTitleLeft.setOnClickListener {
+            callback(it as LinearLayout)
+        }
+        llTitleRightIv1.setOnClickListener {
+            callback(it as LinearLayout)
+        }
+        llTitleRightIv2.setOnClickListener {
+            callback(it as LinearLayout)
+        }
+        llTitleRightTv.setOnClickListener {
+            callback(it as LinearLayout)
+        }
     }
 
     private fun init() {
@@ -91,15 +109,22 @@ class ZxyToolbar : LinearLayout {
                 Toast.makeText(mContext, "分享2", Toast.LENGTH_SHORT).show()
             }
         }
-        if (titleTextColor != null) {
-            titleView.tvTitle.setTextColor(titleTextColor!!)
+        if(titleText!=null){
+            titleView.tvTitle.visibility = View.VISIBLE
+            titleView.tvTitle.text = titleText
+            if (titleTextColor != null) {
+                titleView.tvTitle.setTextColor(titleTextColor!!)
+            }
         }
+
         titleView.tvTitle.isSelected = tvTitle.text.length > 9  //开启关闭走马灯
         titleView.llTitleLeft.setOnClickListener {
             Toast.makeText(mContext, "返回", Toast.LENGTH_SHORT).show()
         }
     }
 
-
+    override fun onSizeChanged(w: Int, h: Int, oldw: Int, oldh: Int) {
+        super.onSizeChanged(w, h, oldw, oldh)
+    }
 
 }

@@ -4,6 +4,7 @@ import android.graphics.PorterDuff
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import android.widget.Toolbar
 import com.gyf.immersionbar.ImmersionBar
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -25,5 +26,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initToolbar() {
+        zxyToolbar.addToolbarOnClickListener {
+           Toast.makeText(this,"返回",Toast.LENGTH_LONG).show()
+        }
     }
 }

@@ -6,6 +6,7 @@
     android:layout_height="match_parent">
 
     <com.zxy.zxytoolbar.ZxyToolbar
+        android:id="@+id/zxyToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -15,6 +16,9 @@
         app:rightImg1="@drawable/zxy_share"
         app:rightImg2="@drawable/zxy_share"
         app:rightText="报名"
+        app:layout="@layout/titlebar"
+        app:titleText="标题标题标题标题标题标题标题标题标题标题标题"
+        android:background="#5B3F51B5"
         app:rightTextColor="@color/color_999999"
         app:titleTextColor="@color/color_999999" />
 

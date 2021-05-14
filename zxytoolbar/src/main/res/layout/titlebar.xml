@@ -10,10 +10,10 @@
         android:id="@+id/titleRoot"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_height="50dp">
 
         <LinearLayout
             android:id="@+id/llTitleLeft"
@@ -48,7 +48,7 @@
             android:marqueeRepeatLimit="marquee_forever"
             android:scrollHorizontally="true"
             android:singleLine="true"
-            android:text="标题标题标题标题标题"
+            tools:text="标题标题标题标题标题"
             android:textColor="#333333"
             android:textSize="20sp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -80,7 +80,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/zxy_share" />
+                    tools:src="@drawable/zxy_share" />
             </LinearLayout>
 
             <LinearLayout
@@ -102,7 +102,7 @@
                     android:layout_marginLeft="15dp"
                     android:layout_marginRight="15dp"
                     android:adjustViewBounds="true"
-                    android:src="@drawable/zxy_share" />
+                    tools:src="@drawable/zxy_share" />
             </LinearLayout>
 
             <LinearLayout
@@ -125,13 +125,16 @@
                     android:gravity="center"
                     android:maxLines="1"
                     android:src="@drawable/zxy_share"
-                    android:text="保存"
+                    tools:text="保存"
                     android:textColor="#333333"
                     android:textSize="18sp"
                     android:visibility="visible"
                     tools:visibility="visible" />
             </LinearLayout>
 
+            <View
+                android:layout_width="6dp"
+                android:layout_height="0dp" />
         </LinearLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
