@@ -6,8 +6,8 @@
     android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <com.zxy.zxytoolbar.ZxyToolbar
-        android:id="@+id/zxyToolbar"
+    <com.zxy.zxytoolbar.ZToolbar
+        android:id="@+id/zToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -31,5 +31,5 @@
         android:text="123"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/zxyToolbar" />
+        app:layout_constraintTop_toBottomOf="@id/zToolbar" />
 </LinearLayout>
