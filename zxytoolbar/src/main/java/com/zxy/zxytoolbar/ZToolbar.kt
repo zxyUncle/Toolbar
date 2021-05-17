@@ -10,7 +10,6 @@ import android.view.View
 import android.widget.LinearLayout
 import android.widget.Toast
 import com.bumptech.glide.Glide
-import com.zxy.zxytoolbar.interfaces.ZToolbarListener
 import kotlinx.android.synthetic.main.titlebar.view.*
 
 
