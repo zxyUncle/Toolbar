@@ -13,7 +13,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:leftImg="@drawable/zxy_back"
+        app:leftImg="@drawable/ic_launcher_background"
         app:rightImg1="@drawable/zxy_share"
         app:rightImg2="@drawable/zxy_share"
         app:rightText="报名"
@@ -24,12 +24,4 @@
         app:rightTextColor="@color/color_999999"
         app:titleTextColor="@color/color_999999" />
 
-    <Button
-        android:id="@+id/btnRequest"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="123"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/zToolbar" />
 </LinearLayout>

@@ -24,13 +24,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initToolbar() {
-        zToolbar.addOnToolbarListener(onBack = {
+        zToolbar.addOnToolbarListener(OnBack = {
             Toast.makeText(this, "返回1", Toast.LENGTH_LONG).show()
-        }, onIvRight1 = {
+        }, OnIvRight1 = {
             Toast.makeText(this, "分享1", Toast.LENGTH_LONG).show()
-        }, onIvRight2 = {
+        }, OnIvRight2 = {
             Toast.makeText(this, "分享2", Toast.LENGTH_LONG).show()
-        }, ontvRight = {
+        }, OntvRight = {
             Toast.makeText(this, "提交", Toast.LENGTH_LONG).show()
         })
 

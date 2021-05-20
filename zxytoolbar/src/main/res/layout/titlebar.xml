@@ -23,7 +23,8 @@
             android:gravity="center"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="NewApi">
 
             <ImageView
                 android:layout_width="25dp"
@@ -71,7 +72,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:visibility="visible">
+                tools:visibility="visible"
+                tools:targetApi="lollipop">
 
                 <ImageView
                     android:id="@+id/ivTitleRightIv1"
@@ -93,7 +95,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:visibility="visible">
+                tools:visibility="visible"
+                tools:ignore="NewApi">
 
                 <ImageView
                     android:id="@+id/ivTitleRightIv2"
@@ -115,7 +118,8 @@
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:visibility="visible">
+                tools:visibility="visible"
+                tools:ignore="NewApi">
 
                 <TextView
                     android:id="@+id/tvTitleRight"

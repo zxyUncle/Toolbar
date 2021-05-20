@@ -8,8 +8,6 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.widget.LinearLayout
-import android.widget.Toast
-import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.titlebar.view.*
 
 
@@ -69,22 +67,22 @@ class ZToolbar : LinearLayout {
      * @param ontvRight  右边提交
      */
     fun addOnToolbarListener(
-        onBack: (LinearLayout) -> Unit,
-        onIvRight1:((LinearLayout) -> Unit)={},
-        onIvRight2: ((LinearLayout) -> Unit)={},
-        ontvRight: ((LinearLayout) -> Unit)={}
+        OnBack: (LinearLayout) -> Unit,
+        OnIvRight1:((LinearLayout) -> Unit)={},
+        OnIvRight2: ((LinearLayout) -> Unit)={},
+        OntvRight: ((LinearLayout) -> Unit)={}
     ) {
         llTitleLeft.setOnClickListener {
-            onBack(it as LinearLayout)
+            OnBack(it as LinearLayout)
         }
         llTitleRightIv1.setOnClickListener {
-            onIvRight1(it as LinearLayout)
+            OnIvRight1(it as LinearLayout)
         }
         llTitleRightIv2.setOnClickListener {
-            onIvRight2(it as LinearLayout)
+            OnIvRight2(it as LinearLayout)
         }
         llTitleRightTv.setOnClickListener {
-            ontvRight(it as LinearLayout)
+            OntvRight(it as LinearLayout)
         }
     }
 
@@ -96,12 +94,14 @@ class ZToolbar : LinearLayout {
         addView(titleView)
         //右边第一个图片
         if (rightImg1 != null) {
-            Glide.with(mContext!!).load(rightImg1).into(titleView.ivTitleRightIv1)
+            titleView.ivTitleRightIv1.setImageDrawable(rightImg1)
+//            Glide.with(mContext!!).load(rightImg1).into(titleView.ivTitleRightIv1)
             titleView.llTitleRightIv1.visibility = View.VISIBLE
         }
         //右边第二个图片
         if (rightImg2 != null) {
-            Glide.with(mContext!!).load(rightImg2).into(titleView.ivTitleRightIv2)
+            titleView.ivTitleRightIv2.setImageDrawable(rightImg2)
+//            Glide.with(mContext!!).load(rightImg2).into(titleView.ivTitleRightIv2)
             titleView.llTitleRightIv2.visibility = View.VISIBLE
         }
         //保存
