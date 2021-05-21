@@ -24,6 +24,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initToolbar() {
+        zToolbar.update()
         zToolbar.addOnToolbarListener(OnBack = {
             Toast.makeText(this, "返回1", Toast.LENGTH_LONG).show()
         }, OnIvRight1 = {

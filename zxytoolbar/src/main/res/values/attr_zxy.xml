@@ -12,5 +12,8 @@
         <!-- 文案       -->
         <attr name="titleText" format="string" />
         <attr name="rightText" format="string" />
+        <!-- 尺寸值       -->
+        <attr name="titleSize" format="dimension"/>
+        <attr name="rightTextSize" format="dimension"/>
     </declare-styleable>
 </resources>

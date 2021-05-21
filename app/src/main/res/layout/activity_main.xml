@@ -3,25 +3,29 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
 
     <com.zxy.zxytoolbar.ZToolbar
         android:id="@+id/zToolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
+        android:background="#5B3F51B5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:leftImg="@drawable/ic_launcher_background"
+
+        app:leftImg="@drawable/zxy_back"
         app:rightImg1="@drawable/zxy_share"
         app:rightImg2="@drawable/zxy_share"
-        app:rightText="报名"
-        app:layoutDescription="@layout/titlebar"
-        app:layout="@layout/titlebar"
-        app:titleText="标题标题标题标题标题标题标题标题标题标题标题"
-        android:background="#5B3F51B5"
-        app:rightTextColor="@color/color_999999"
-        app:titleTextColor="@color/color_999999" />
+
+        app:rightText="分享"
+        app:titleText="大家好,我是一个标题，你是谁？"
+
+        app:titleSize="20sp"
+        app:rightTextSize="18sp"
+
+        app:rightTextColor="@color/color_333333"
+        app:titleTextColor="@color/color_333333" />
 
 </LinearLayout>
